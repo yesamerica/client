@@ -7,7 +7,6 @@ function App() {
     <>
     <Link to="/signup">Sign Up Here</Link>
       <SignInCanvas />
-    <p>yodfsdf</p>
     </>
   );
 }
