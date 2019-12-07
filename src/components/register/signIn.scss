@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
 body {
   margin: 0;
+  //background-image: url('../../images/Artboard.svg');
+  background-size: cover;
 }
+
 .SignInCanvas {
   height: 95vh;
   width: 100vw;
@@ -8,24 +17,42 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  
+  p {
+    font-size: 1.6rem;
+    margin: 5px auto;
+  }
 
- 
   .authButton {
     width: 100%;
-    margin:0 0 15px 0;
+    margin: 0 0 15px 0;
     display: flex;
     justify-content: center;
 
     button {
-      width: 70%;
+      width: 60%;
       border: none;
       padding: 12px 0;
       color: #fff;
+      font-size: 1.8rem;
     }
     .fb_login {
       background: #3d5d9c;
     }
 
+    .fa-facebook-f {
+      color: #fff;
+      font-size: 1.8rem;
+      background: #314a7d;
+      padding: 1.5rem 2rem;
+    }
+
+    .fa-google-plus-g {
+      color: #fff;
+      font-size: 1.8rem;
+      background: #b03e20;
+      padding: 15px;
+    }
     .google_login {
       background: #dc4d28;
     }

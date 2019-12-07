@@ -6,7 +6,7 @@ const GoogleSignInButton = () => {
   //Auth and Auth Success can be thought of like Fire and Air
   const auth = () => {
     window.open(
-      "https://apidevnow.com/googleAuth",
+      "https://yesamerica-api.herokuapp.com/googleAuth",
       "Sign In With googlehub ;)",
       "width=400,height=500"
     );
@@ -25,7 +25,7 @@ const GoogleSignInButton = () => {
 
   return (
     <div className="authButton">
-      <i>G</i>
+      <i class="fab fa-google-plus-g"></i>
       <button className="google_login" onClick={auth}>
         Google
       </button>
