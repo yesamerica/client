@@ -1,0 +1,12 @@
+
+body{margin:0;}
+.SignInCanvas{
+    height:100vh;
+    width:100vw;
+    background:black;
+    background:url('../../images/login_bg.jpg');
+    background-size:cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
