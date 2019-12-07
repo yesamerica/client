@@ -5,7 +5,7 @@ import SignInCanvas from './components/register/';
 function App() {
   return (
     <>
-    <Link to="/signup">Sign Up Here</Link>
+  
       <SignInCanvas />
 
     </>
