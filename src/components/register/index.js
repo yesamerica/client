@@ -10,8 +10,9 @@ const SignInCanvas = () =>{
     return(
         <div className="SignInCanvas">
             {/* <GithubSignInButton/><br /> */}
-            <GoogleSignInButton/><br />
-            <FacebookSignInButton/><br />
+            <GoogleSignInButton/>
+            <FacebookSignInButton/>
+            <p>Don't Have an Account?</p>
             {/* <LocalSignUpForm /> */}
         </div>
     );

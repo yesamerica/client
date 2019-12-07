@@ -17,11 +17,12 @@ const FacebookSignInButton = () => {
   }
 
   return (
-    <>
-      <button onClick={auth}>
-        Login with Facebook
+    <div className="authButton">
+      <i>F</i>
+      <button className="fb_login" onClick={auth}>
+        Facebook
       </button>
-    </>
+    </div>
   );
 };
 
