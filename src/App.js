@@ -8,7 +8,7 @@ function App() {
 
   setTimeout(() => {
     loading && setLoading(false)
-  }, 2000);
+  }, 5000);
 
   
   return loading ? <Loading /> :(
