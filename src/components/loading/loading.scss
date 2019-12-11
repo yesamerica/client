@@ -3,9 +3,14 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    background: url('../../images/load_screen_bg.png');
+    background-image: url('../../images/Load_Screen_bg.svg');
     background-size:cover;
+
+    img{
+        max-width:70%;
+    }
+    
 }
 
