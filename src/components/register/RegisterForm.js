@@ -3,7 +3,9 @@ import axios from "axios";
 import userIcon from "../../images/user_icon.svg";
 import pwIcon from "../../images/pw_icon.svg";
 import logoWhite from '../../images/logo_wh.svg'
-const RegisterForm = () => {
+import BackButton from "./BackButton";
+
+const RegisterForm = (props) => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -28,17 +30,16 @@ const RegisterForm = () => {
     <div className="localRegister">
         <img className="logo" src={logoWhite} />
       <form onSubmit={handleSubmit}>
-        <div>
-          <img src={userIcon} alt="Standard white user icon" />
+      <div>
           <input
-            type="text"
-            name="username"
-            placeholder="Username"
+            type="email"
+            name="email"
+            placeholder="Email"
             onChange={handleChanges}
           />
         </div>
+      
         <div>
-          <img src={pwIcon} alt="Standard white lock icon" />
           <input
             type="password"
             name="password"
@@ -46,9 +47,19 @@ const RegisterForm = () => {
             onChange={handleChanges}
           />
         </div>
+        <div>
+          <input
+            type="password"
+            name="cpassword"
+            placeholder="Confirm Password"
+            onChange={handleChanges}
+          />
+        </div>
+
+       
         <button type="submit">Sign Up</button>
       </form>
-      <p>Don't Have an Account?</p>
+      <BackButton {...props} />
     </div>
   );
 };

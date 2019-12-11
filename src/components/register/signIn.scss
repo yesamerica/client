@@ -140,6 +140,7 @@
   background-image: url("../../images/login_account_bg.svg");
   background-size: cover;
   color: #fff;
+
   img.logo {
     position: absolute;
     top: 7%;
@@ -148,23 +149,20 @@
     margin: auto;
     width: 70%;
   }
+  div {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1.5rem;
+
+    img {
+      margin: 1rem;
+      width: 6rem;
+    }
+  }
   h2 {
     font-weight: lighter;
-    font-size: 1.8rem;
-    margin:2.5rem;
-  }
-
-  button {
-    padding:0;
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:3rem;
-    h2{
-      font-size:1.6rem;
-      margin:0;
-    }
+    font-size: 1.7rem;
+    margin: 1.8rem;
   }
 }
 
@@ -184,5 +182,64 @@
     right: 0;
     margin: auto;
     width: 70%;
+  }
+  form {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    div {
+      border-bottom: 1px solid #adadad;
+      display: flex;
+      margin: 1rem;
+      img {
+        width: 2rem;
+      }
+    }
+    input {
+      border: none;
+      background: none;
+      color: #adadad;
+      font-size: 2rem;
+      margin: 15px 0;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        color: #fff;
+      }
+    }
+    button {
+      background: none;
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      padding: 1rem;
+      &:focus {
+        outline: none;
+      }
+      &:active,
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+}
+
+.BackButton {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  h2 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  img {
+    margin: 0.3rem 1rem;
+    width: 2rem;
   }
 }
