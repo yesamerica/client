@@ -12,10 +12,10 @@ function pushLinks(links) {
 }
 
 var windows = [];
-for (let i = 100; i < 150; i++) {
+for (let i = 1; i < 100; i++) {
   windows.push(
     window.open(
-      `https://www.f4cp.org/package/finddoctorbycity?drname=&city=a&office_state=CA&page=${i}`,
+      `https://www.f4cp.org/package/finddoctorbycity?drname=&city=a&office_state=NV&page=${i}`,
       `mypopup${i}`,
       "width=500,height=300"
     )
