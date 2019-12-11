@@ -6,7 +6,6 @@ import FacebookSignInButton from "./FacebookSignInButton";
 import LocalSignUpForm from "./LocalSignUpForm";
 import "./signIn.scss";
 const SignInCanvas = () => {
-  console.log("herehere");
   return (
     <div className="SignInCanvas">
       {/* <GithubSignInButton/><br /> */}

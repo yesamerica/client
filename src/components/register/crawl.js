@@ -1,5 +1,4 @@
-
-
+//PART 1
 var emails = [];
 function pushLinks(links) {
   for (var i = 0; i < links.length; i++) {
@@ -12,7 +11,7 @@ function pushLinks(links) {
 }
 
 var windows = [];
-for (let i = 100; i < 150; i++) {
+for (let i = 150; i < 200; i++) {
   windows.push(
     window.open(
       `https://www.f4cp.org/package/finddoctorbycity?drname=&city=a&office_state=CA&page=${i}`,

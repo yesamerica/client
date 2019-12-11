@@ -25,7 +25,7 @@ const GoogleSignInButton = () => {
 
   return (
     <div className="authButton">
-      <i class="fab fa-google-plus-g"></i>
+      <i className="fab fa-google-plus-g"></i>
       <button className="google_login" onClick={auth}>
         Google
       </button>
