@@ -25,6 +25,7 @@ const LocalSignUpForm = (props) => {
       .then(res => console.log(res.data));
   };
 
+<<<<<<< HEAD
   return (
     <div className="localSignIn">
         <img className="logo" src={logoWhite} />
@@ -46,6 +47,25 @@ const LocalSignUpForm = (props) => {
             placeholder="Password"
             onChange={handleChanges}
           />
+=======
+    return(
+        <div className="localSignIn">
+            <form onSubmit ={handleSubmit}>
+                <input 
+                type="text"
+                name="email"
+                placeholder="Enter Your Email Address Here"
+                onChange={handleChanges}
+                />
+                <input 
+                type="password"
+                name ="password"
+                placeholder="Create Your Password"
+                onChange={handleChanges}
+                />
+                <button type='submit'>Sign Up</button>
+            </form>
+>>>>>>> 674ceb65bb76ceaebe51e91c537bf49790a56c84
         </div>
         <button type="submit">Sign In</button>
       </form>

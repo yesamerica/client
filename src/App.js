@@ -4,8 +4,11 @@ import './globals.scss'
 import Loading from './components/loading/';
 import {Route} from 'react-router-dom'
 import LocalSignUpForm from "./components/register/LocalSignUpForm";
+<<<<<<< HEAD
 import RegisterForm from './components/register/RegisterForm'
 import NoAccount from './components/register/NoAccount'
+=======
+>>>>>>> 674ceb65bb76ceaebe51e91c537bf49790a56c84
 function App() {
   const [loading,setLoading] = useState(false)
 
