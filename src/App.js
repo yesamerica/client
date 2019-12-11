@@ -1,13 +1,19 @@
-import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import React, {useState} from 'react';
 import SignInCanvas from './components/register/';
+import './globals.scss'
+import Loading from './components/loading/'
 
 function App() {
-  return (
-    <>
-  
-      <SignInCanvas />
+  const [loading,setLoading] = useState(true)
 
+  setTimeout(() => {
+    loading && setLoading(false)
+  }, 5000);
+
+  
+  return loading ? <Loading /> :(
+    <>
+      <SignInCanvas />
     </>
   );
 }

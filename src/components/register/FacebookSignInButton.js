@@ -18,7 +18,7 @@ const FacebookSignInButton = () => {
 
   return (
     <div className="authButton">
-      <i class="fab fa-facebook-f"></i>
+      <i className="fab fa-facebook-f"></i>
       <button className="fb_login" onClick={auth}>
         Facebook
       </button>
