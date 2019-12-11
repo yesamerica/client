@@ -6,10 +6,29 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  
+  background-image: url('../../images/login_bg.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   p {
     font-size: 1.6rem;
     margin: 5px auto;
+  }
+
+  img.logo{
+    max-width:70%;
+    position: absolute;
+    top:7%;
+    left:0;
+    right:0;
+    margin:auto;
+  }
+
+  img.signIn{
+    max-width: 70%;
+    margin:15px;
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   .authButton {
@@ -19,11 +38,11 @@
     justify-content: center;
 
     button {
-      width: 60%;
+      width: 50%;
       border: none;
-      padding: 12px 0;
+      padding: 10px 0;
       color: #fff;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
     }
     .fb_login {
       background: #3d5d9c;
@@ -33,7 +52,7 @@
       color: #fff;
       font-size: 1.8rem;
       background: #314a7d;
-      padding: 1.5rem 2rem;
+      padding: 1.4rem 2rem;
     }
 
     .fa-google-plus-g {
@@ -46,4 +65,17 @@
       background: #dc4d28;
     }
   }
+}
+
+.localSignIn{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('../../images/login_account_bg.svg');
+  background-size: cover;
+
+
 }

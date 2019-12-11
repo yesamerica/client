@@ -21,7 +21,7 @@ const LocalSignUpForm = ()=> {
     };
 
     return(
-        <div>
+        <div className="localSignIn">
             <form onSubmit ={handleSubmit}>
                 <input 
                 type="text"

@@ -4,15 +4,17 @@ import GithubSignInButton from "./GithubSignInButton";
 import GoogleSignInButton from "./GoogleSignInButton";
 import FacebookSignInButton from "./FacebookSignInButton";
 import LocalSignUpForm from "./LocalSignUpForm";
+import logoWhite from '../../images/logo_wh.svg'
+import signIn from '../../images/signin_button.svg'
 import "./signIn.scss";
-const SignInCanvas = () => {
+const SignInCanvas = (props) => {
   return (
     <div className="SignInCanvas">
-      {/* <GithubSignInButton/><br /> */}
+      <img className="logo" src={logoWhite} alt="Yes America" />
+      <img className="signIn" onClick={()=>props.history.push('/signIn')} src={signIn} alt="Sign In to Yes america blue button with icon" />
       <FacebookSignInButton />
       <GoogleSignInButton />
       <p>Don't Have an Account?</p>
-      {/* <LocalSignUpForm /> */}
     </div>
   );
 };
