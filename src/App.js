@@ -10,7 +10,6 @@ function App() {
     loading && setLoading(false)
   }, 5000);
 
-  
   return loading ? <Loading /> :(
     <>
       <SignInCanvas />
