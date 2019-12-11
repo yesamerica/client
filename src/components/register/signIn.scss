@@ -5,11 +5,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-<<<<<<< HEAD
   background-image: url("../../images/login_bg.svg");
-=======
-  background-image: url('../../images/login_bg.svg');
->>>>>>> 674ceb65bb76ceaebe51e91c537bf49790a56c84
   background-repeat: no-repeat;
   background-size: 100%;
   p {
@@ -17,7 +13,6 @@
     margin: 5px auto;
   }
 
-<<<<<<< HEAD
   img.logo {
     max-width: 70%;
     position: absolute;
@@ -31,21 +26,6 @@
     max-width: 70%;
     margin: 15px;
     &:hover {
-=======
-  img.logo{
-    max-width:70%;
-    position: absolute;
-    top:7%;
-    left:0;
-    right:0;
-    margin:auto;
-  }
-
-  img.signIn{
-    max-width: 70%;
-    margin:15px;
-    &:hover{
->>>>>>> 674ceb65bb76ceaebe51e91c537bf49790a56c84
       cursor: pointer;
     }
   }
@@ -86,18 +66,13 @@
   }
 }
 
-<<<<<<< HEAD
 .localSignIn {
-=======
-.localSignIn{
->>>>>>> 674ceb65bb76ceaebe51e91c537bf49790a56c84
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-<<<<<<< HEAD
   background-image: url("../../images/login_account_bg.svg");
   background-size: cover;
   img.logo {
@@ -210,10 +185,4 @@
     margin: auto;
     width: 70%;
   }
-=======
-  background-image: url('../../images/login_account_bg.svg');
-  background-size: cover;
-
-
->>>>>>> 674ceb65bb76ceaebe51e91c537bf49790a56c84
 }
