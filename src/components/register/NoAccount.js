@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logoWhite from '../../images/logo_wh.svg'
-import BackButton from './BackButton'
+import BackButton from './buttons/BackButton'
 import companyIcon from '../../images/company_icon.svg'
 import individualIcon from '../../images/individual_icon.svg'
 import providerIcon from '../../images/provider_icon.svg'

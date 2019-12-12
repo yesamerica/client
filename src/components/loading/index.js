@@ -1,6 +1,6 @@
 import React from 'react'
 import './loading.scss'
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo.png'
 const Loading = () =>{
 
     return(

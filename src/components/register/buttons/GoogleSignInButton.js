@@ -1,7 +1,8 @@
 //Sign in Canvas
 import React from "react";
+import { tsPropertySignature } from "@babel/types";
 
-const GoogleSignInButton = () => {
+const GoogleSignInButton = (props) => {
   console.log("googleCalled");
   //Auth and Auth Success can be thought of like Fire and Air
   const auth = () => {
@@ -20,7 +21,9 @@ const GoogleSignInButton = () => {
   };
 
   const authSuccess = userObject => {
-    console.log(JSON.parse(userObject));
+    const data = JSON.parse(userObject)
+    localStorage.setItem("token", data.token);
+    props.history.push('/dashboard')
   };
 
   return (

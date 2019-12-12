@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import userIcon from "../../images/user_icon.svg";
-import pwIcon from "../../images/pw_icon.svg";
-import logoWhite from '../../images/logo_wh.svg'
-import BackButton from "./BackButton";
+import logoWhite from "../../images/logo_wh.svg";
+import BackButton from "./buttons/BackButton";
 
-const RegisterForm = (props) => {
+const RegisterForm = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -22,15 +20,20 @@ const RegisterForm = (props) => {
   const handleSubmit = e => {
     e.preventDefault();
     axios
-      .post("https://apidevnow.com/register", user)
-      .then(res => console.log(res.data));
+      .post("https://yesamerica-api.herokuapp.com/register", user)
+      .then(res => {
+
+        localStorage.setItem("token", res.data.token);
+        props.history.push('/dashboard')
+      })
+      .catch(res => console.log(res.data));
   };
 
   return (
     <div className="localRegister">
-        <img className="logo" src={logoWhite} />
+      <img className="logo" src={logoWhite} />
       <form onSubmit={handleSubmit}>
-      <div>
+        <div>
           <input
             type="email"
             name="email"
@@ -38,7 +41,7 @@ const RegisterForm = (props) => {
             onChange={handleChanges}
           />
         </div>
-      
+
         <div>
           <input
             type="password"
@@ -52,11 +55,9 @@ const RegisterForm = (props) => {
             type="password"
             name="cpassword"
             placeholder="Confirm Password"
-            onChange={handleChanges}
           />
         </div>
 
-       
         <button type="submit">Sign Up</button>
       </form>
       <BackButton {...props} />

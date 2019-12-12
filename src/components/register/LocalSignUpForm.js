@@ -3,7 +3,7 @@ import axios from "axios";
 import userIcon from "../../images/user_icon.svg";
 import pwIcon from "../../images/pw_icon.svg";
 import logoWhite from '../../images/logo_wh.svg'
-import NoAccountButton from './NoAccountButton'
+import NoAccountButton from './buttons/NoAccountButton'
 const LocalSignUpForm = (props) => {
   const [user, setUser] = useState({
     email: "",
@@ -21,7 +21,7 @@ const LocalSignUpForm = (props) => {
   const handleSubmit = e => {
     e.preventDefault();
     axios
-      .post("https://apidevnow.com/register", user)
+      .post("https://yesamerica-api.herokuapp.com/register", user)
       .then(res => console.log(res.data));
   };
 
@@ -47,7 +47,7 @@ const LocalSignUpForm = (props) => {
             onChange={handleChanges}
           />
         </div>
-        <button type="submit">Sign In</button>
+        <button onClick={handleSubmit} type="submit">Sign In</button>
       </form>
       <NoAccountButton {...props} />
     </div>

@@ -1,0 +1,91 @@
+
+$tray-title-color: #18247c;
+.DashBoard {
+  max-height:100vh;
+  overflow: hidden;
+  header {
+    display: flex;
+    justify-content: baseline;
+    padding: 0 2rem;
+    height: 15vh;
+    width: 100%;
+    background-image: url("../../images/dash_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .logo {
+      width: 70%;
+      height: 100px;
+    }
+  }
+  img {
+    max-width: 70%;
+  }
+
+  .DashBoardContentContainer{
+    margin-top:2rem;
+    padding:0 1.5rem;
+    display:flex;
+    flex-direction: column;
+    height:85vh;
+  }
+}
+
+.Notifications,.Events{
+  margin:1rem;
+  max-width:100%;
+  width:100%;
+  margin:1rem auto;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  p{
+    padding:0;
+    margin:0;
+  }
+  .TrayTitle{
+    display: flex;
+    background: #dad7d7;
+    align-items: center;
+    padding:.5rem;
+    font-size:1.8rem;
+    color:$tray-title-color;
+    img{
+      margin:0 1rem;
+      max-width:2.5rem;
+    }
+  }
+  
+}
+
+.Events {
+  .Event {
+    padding:.5rem 2rem;
+    background: #e7e7e7;
+    display: flex;
+    img {
+      width: 35%;
+    }
+
+    .EventData{
+      margin:1rem;
+    }
+  }
+}
+
+
+.Notifications {
+  
+  .Notification {
+    padding:.5rem 2rem;
+    background: #e7e7e7;
+    display: flex;
+    img {
+      width: 2rem;
+    }
+
+    .NotificationsData{
+      color:red;
+      margin:1rem;
+    }
+  }
+}

@@ -13,7 +13,7 @@ const FacebookSignInButton = () => {
   }
 
   const authSuccess = userObject => {
-    console.log(JSON.parse(userObject))
+    console.log(JSON.parse(userObject.token))
   }
 
   return (
