@@ -30,6 +30,24 @@ $tray-title-color: #18247c;
   }
 }
 
+.AppTray {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  align-content: baseline;
+  padding:.5rem;
+  background:#e7e7e7 ;
+  img {
+    margin: 0.3rem 1rem;
+    height:6rem;
+  }
+}
+
 .Notifications,.Events{
   margin:1rem;
   max-width:100%;
