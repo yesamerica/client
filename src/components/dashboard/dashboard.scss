@@ -5,8 +5,9 @@ $tray-title-color: #18247c;
   overflow: hidden;
   header {
     display: flex;
-    justify-content: baseline;
-    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2rem 2rem;
     height: 15vh;
     width: 100%;
     background-image: url("../../images/dash_bg.svg");
@@ -16,10 +17,11 @@ $tray-title-color: #18247c;
       width: 70%;
       height: 100px;
     }
-  }
+    
   img {
     max-width: 70%;
   }
+}
 
   .DashBoardContentContainer{
     margin-top:2rem;
@@ -106,3 +108,5 @@ $tray-title-color: #18247c;
     }
   }
 }
+
+
