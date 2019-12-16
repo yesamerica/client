@@ -17,15 +17,6 @@ const LocalEvents = () => {
           <p>Sponsor: </p>
         </div>
       </div>
-      <div className="Event">
-        <img src={eventImage}/>
-        <div className="EventData">
-          <p>Date: </p>
-          <p>Event: </p>
-          <p>Provider: </p>
-          <p>Sponsor: </p>
-        </div>
-      </div>
     </section>
   );
 };

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import axios from "axios";
 import userIcon from "../../images/user_icon.svg";
 import pwIcon from "../../images/pw_icon.svg";
-import logoWhite from '../../images/logo_wh.svg'
-import NoAccountButton from './buttons/NoAccountButton'
-const LocalSignUpForm = (props) => {
+import logoWhite from "../../images/logo_wh.svg";
+import NoAccountButton from "./buttons/NoAccountButton";
+import { axiosWithAuth } from "../../util/axiosWithAuth";
+const LocalSignUpForm = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -16,25 +16,33 @@ const LocalSignUpForm = (props) => {
       ...user,
       [e.target.name]: e.target.value
     });
+    console.log("user", user);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios
-      .post("https://yesamerica-api.herokuapp.com/register", user)
-      .then(res => console.log(res.data));
+    console.log("user", user);
+    axiosWithAuth()
+      .post("/login", user)
+      .then(res => {
+        res.data.token 
+        && localStorage.setItem("token", res.data.token)
+        && props.history.push("/dashboard")
+        console.log(res.data)
+      })
+      .catch(err => console.log(err));
   };
-
+  
   return (
     <div className="localSignIn">
-        <img className="logo" src={logoWhite} />
+      <img className="logo" src={logoWhite} />
       <form onSubmit={handleSubmit}>
         <div>
           <img src={userIcon} alt="Standard white user icon" />
           <input
             type="text"
-            name="username"
-            placeholder="Username"
+            name="email"
+            placeholder="email"
             onChange={handleChanges}
           />
         </div>
@@ -47,13 +55,13 @@ const LocalSignUpForm = (props) => {
             onChange={handleChanges}
           />
         </div>
-        <button onClick={handleSubmit} type="submit">Sign In</button>
+        <button onClick={handleSubmit} type="submit">
+          Sign In
+        </button>
       </form>
       <NoAccountButton {...props} />
     </div>
   );
 };
-
-
 
 export default LocalSignUpForm;

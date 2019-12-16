@@ -9,6 +9,7 @@ import "./signIn.scss";
 
 
 const SignInCanvas = (props) => {
+  localStorage.getItem('token') && props.history.push('/dashboard')
   return (
     <div className="SignInCanvas">
       <img className="logo" src={logoWhite} alt="Yes America" />

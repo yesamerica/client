@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.scss";
-const Menu = () => {
+const Menu = props => {
   const openMenu = e => {
     e.currentTarget.classList.toggle("MenuActive");
   };
+  const logout = () =>{
+    localStorage.clear()
+  }
   return (
     <>
       <div className="Menu" onClick={openMenu}>
@@ -18,7 +21,7 @@ const Menu = () => {
             <Link to="/yo">Book an event</Link>
             <Link to="/yo">Browse events</Link>
             <Link to="/yo">Contact</Link>
-            <Link to="/yo">Logout</Link>
+            <Link onClick={logout} to="/">Logout</Link>
           </nav>
         </div>
       </div>
