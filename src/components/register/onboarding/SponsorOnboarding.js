@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import userIcon from "../../images/user_icon.svg";
-import pwIcon from "../../images/pw_icon.svg";
-import logoWhite from "../../images/logo_wh.svg";
-import { axiosWithAuth } from "../../util/axiosWithAuth";
+import userIcon from "../../../images/user_icon.svg";
+import pwIcon from "../../../images/pw_icon.svg";
+import logoWhite from "../../../images/logo_wh.svg";
+import { axiosWithAuth } from "../../../util/axiosWithAuth";
 const SponsorOnboarding = props => {
   const [user, setUser] = useState({
     email: "",

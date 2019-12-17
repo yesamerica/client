@@ -18,10 +18,7 @@ function App(props) {
 
   return loading ? ( <Loading />) : (
     <>
-      <Route exact path="/" component={SignInCanvas} />
-      <Route exact path="/signin" component={LocalSignUpForm} />
-      <Route exact path="/new-account" component={NoAccount} />
-      <Route exact path="/register"  component={RegisterForm} />
+      <Route  path="/" component={SignInCanvas} />
       <ProtectedRoute path="/dashboard" component={DashBoard} />
     </>
   );

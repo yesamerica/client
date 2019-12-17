@@ -1,3 +1,8 @@
+// Mobile var
+$phone: "(max-width:500px)";
+$phone-land : "(max-height:425px)";
+$tablet: "(max-width:500px)";
+
 .SignInLanding {
   height: 100vh;
   width: 100vw;
@@ -7,6 +12,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media #{$phone-land}{
+    flex-direction: row;
+  }
 
   .signInLandingTop {
     //background: rgba();
@@ -17,6 +25,10 @@
     //background-image: url("../../images/login_bg.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    @media #{$phone-land}{
+      height:100vh;
+      width:auto;
+    }
   }
 
   .signInLandingBottom {
@@ -87,21 +99,15 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   background-image: url("../../images/login_account_bg.svg");
   background-size: cover;
-  img.logo {
-    position: absolute;
-    top: 7%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
-  }
+  padding: 5rem;
+  
   p {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    text-align: center;
   }
   form {
     margin: 2rem 0;

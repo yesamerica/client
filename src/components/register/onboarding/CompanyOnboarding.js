@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import logoWhite from "../../../images/logo_wh.svg";
 
 const CompanyOnboarding = props => {
+  console.log('here')
   const [user, setUser] = useState({});
 
   const handleChanges = e => {

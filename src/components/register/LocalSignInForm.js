@@ -36,30 +36,32 @@ const LocalSignInForm = props => {
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
-      <form onSubmit={handleSubmit}>
-        <div>
-          <img src={userIcon} alt="Standard white user icon" />
-          <input
-            type="text"
-            name="email"
-            placeholder="email"
-            onChange={handleChanges}
-          />
-        </div>
-        <div>
-          <img src={pwIcon} alt="Standard white lock icon" />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            onChange={handleChanges}
-          />
-        </div>
-        <button onClick={handleSubmit} type="submit">
-          Sign In
-        </button>
-      </form>
-      <NoAccountButton {...props} />
+      <div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <img src={userIcon} alt="Standard white user icon" />
+            <input
+              type="text"
+              name="email"
+              placeholder="email"
+              onChange={handleChanges}
+            />
+          </div>
+          <div>
+            <img src={pwIcon} alt="Standard white lock icon" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              onChange={handleChanges}
+            />
+          </div>
+          <button onClick={handleSubmit} type="submit">
+            Sign In
+          </button>
+        </form>
+        <NoAccountButton {...props} />
+      </div>
     </div>
   );
 };
