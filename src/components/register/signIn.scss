@@ -1,12 +1,32 @@
-.SignInCanvas {
-  height: 95vh;
+.SignInLanding {
+  height: 100vh;
   width: 100vw;
+  //max-width: 50rem;
+  margin:auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  background-image: url("../../images/login_bg.svg");
-  background-repeat: no-repeat;
+
+  .signInLandingTop {
+    //background: rgba();
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(blue, white);
+    //background-image: url("../../images/login_bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .signInLandingBottom {
+    height:50vh;
+    display: flex;
+    padding:5vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
   background-size: 100%;
   p {
     font-size: 1.6rem;
@@ -15,10 +35,6 @@
 
   img.logo {
     max-width: 70%;
-    position: absolute;
-    top: 7%;
-    left: 0;
-    right: 0;
     margin: auto;
   }
 
@@ -188,11 +204,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    .errors{
-      color:#ddd;
-      width:100%;
+    .errors {
+      color: #ddd;
+      width: 100%;
       font-size: 1.4rem;
-      padding-left:1rem;
+      padding-left: 1rem;
     }
     div {
       border-bottom: 1px solid #adadad;
@@ -212,7 +228,6 @@
         outline: none;
         background-color: none;
       }
-     
     }
     button {
       background: none;
@@ -249,9 +264,8 @@
   }
 }
 
-
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -259,8 +273,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
- 
-  -webkit-box-shadow:  #ddd ;
+  -webkit-box-shadow: #ddd;
   -webkit-text-fill-color: #fff;
   transition: background-color 5000s ease-in-out 0s;
 }

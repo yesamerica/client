@@ -23,7 +23,7 @@ const GoogleSignInButton = (props) => {
   const authSuccess = userObject => {
     const data = JSON.parse(userObject)
     localStorage.setItem("token", data.token);
-    props.history.push('/dashboard')
+    props.history.push('/new-account')
   };
 
   return (

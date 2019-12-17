@@ -4,7 +4,7 @@ import React from "react";
 const NoAccountButton = (props) => {
   
   return (
-        <p onClick={()=>props.history.push("/new-account")}>Don't Have an Account?</p>
+        <p onClick={()=>props.history.push("/register")}>Don't Have an Account?</p>
   );
 };
 

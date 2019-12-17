@@ -1,22 +1,18 @@
 //Sign in Canvas
 import React from "react";
-import GoogleSignInButton from "./buttons/GoogleSignInButton";
-import FacebookSignInButton from "./buttons/FacebookSignInButton";
-import NoAccountButton from "./buttons/NoAccountButton";
-import logoWhite from '../../images/logo_wh.svg'
-import signIn from '../../images/signin_button.svg'
+import { Route } from "react-router-dom";
+import SignInLanding from './SignInLanding';
+import LocalSignupForm from './LocalSignInForm'
+import LocalRegisterForm from './LocalRegisterForm'
 import "./signIn.scss";
 
-
-const SignInCanvas = (props) => {
-  localStorage.getItem('token') && props.history.push('/dashboard')
+const SignInCanvas = props => {
   return (
     <div className="SignInCanvas">
-      <img className="logo" src={logoWhite} alt="Yes America" />
-      <img className="signIn" onClick={()=>props.history.push('/signIn')} src={signIn} alt="Sign In to Yes america blue button with icon" />
-      <FacebookSignInButton {...props}/>
-      <GoogleSignInButton {...props}/>
-      <NoAccountButton {...props}/>
+    <Route exact path="/" component={SignInLanding}/>
+    <Route exact path="/register" component={LocalRegisterForm} />
+    <Route exact path="/signup" component={LocalSignupForm} />
+    <Route path="/new-account" />
     </div>
   );
 };

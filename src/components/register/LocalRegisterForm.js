@@ -3,7 +3,7 @@ import { axiosWithAuth } from "../../util/axiosWithAuth";
 import logoWhite from "../../images/logo_wh.svg";
 import BackButton from "./buttons/BackButton";
 
-const RegisterForm = props => {
+const LocalRegisterForm = props => {
   const [errors, setErros] = useState();
   const [user, setUser] = useState({
     email: "",
@@ -32,7 +32,8 @@ const RegisterForm = props => {
       .post("/register", user)
       .then(res => {
         if (res.data.token) {
-          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("token", res.data.token)
+          props.history.push('/new-account')
         } else {
           setErros(res.data.errors)
         }
@@ -73,4 +74,4 @@ const RegisterForm = props => {
   );
 };
 
-export default RegisterForm;
+export default LocalRegisterForm;

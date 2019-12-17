@@ -4,7 +4,7 @@ import pwIcon from "../../images/pw_icon.svg";
 import logoWhite from "../../images/logo_wh.svg";
 import NoAccountButton from "./buttons/NoAccountButton";
 import { axiosWithAuth } from "../../util/axiosWithAuth";
-const LocalSignUpForm = props => {
+const LocalSignInForm = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -25,14 +25,14 @@ const LocalSignUpForm = props => {
     axiosWithAuth()
       .post("/login", user)
       .then(res => {
-        res.data.token 
-        && localStorage.setItem("token", res.data.token)
-        && props.history.push("/dashboard")
-        console.log(res.data)
+        if (res.data.token) {
+          localStorage.setItem("token", res.data.token);
+          props.history.push("/dashboard");
+        }
       })
       .catch(err => console.log(err));
   };
-  
+
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
@@ -64,4 +64,4 @@ const LocalSignUpForm = props => {
   );
 };
 
-export default LocalSignUpForm;
+export default LocalSignInForm;
