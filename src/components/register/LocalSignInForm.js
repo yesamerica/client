@@ -4,6 +4,7 @@ import pwIcon from "../../images/pw_icon.svg";
 import logoWhite from "../../images/logo_wh.svg";
 import NoAccountButton from "./buttons/NoAccountButton";
 import { axiosWithAuth } from "../../util/axiosWithAuth";
+import BackButton from "./buttons/BackButton";
 const LocalSignInForm = props => {
   const [errors, setErros] = useState([]);
   const [user, setUser] = useState({
@@ -20,14 +21,15 @@ const LocalSignInForm = props => {
     console.log("user", user);
   };
 
-  const findErrors = (key) => {
-    let relativeErrors = []
-    console.log(errors)
-    errors && errors.map(error =>{
-      error[key] && relativeErrors.push(error[key])
-    })
-    return relativeErrors
-  }
+  const findErrors = key => {
+    let relativeErrors = [];
+    console.log(errors);
+    errors &&
+      errors.map(error => {
+        error[key] && relativeErrors.push(error[key]);
+      });
+    return relativeErrors;
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -36,11 +38,11 @@ const LocalSignInForm = props => {
       .post("/login", user)
       .then(res => {
         if (res.data.token) {
-          localStorage.setItem("token", res.data.token)
-          props.history.push('/signin')
+          localStorage.setItem("token", res.data.token);
+          props.history.push("/signin");
         } else {
-          console.log(res.data.errors)
-          setErros(res.data.errors)
+          console.log(res.data.errors);
+          setErros(res.data.errors);
         }
       })
       .catch(err => console.log(err));
@@ -60,7 +62,12 @@ const LocalSignInForm = props => {
               onChange={handleChanges}
             />
           </div>
-          {errors && findErrors('email').map((err,i)=><p className="errors" key={i}>{err}</p>)}
+          {errors &&
+            findErrors("email").map((err, i) => (
+              <p className="errors" key={i}>
+                {err}
+              </p>
+            ))}
           <div>
             <img src={pwIcon} alt="Standard white lock icon" />
             <input
@@ -70,13 +77,19 @@ const LocalSignInForm = props => {
               onChange={handleChanges}
             />
           </div>
-          {errors && findErrors('password').map((err,i)=><p className='errors' key={i}>{err}</p>)}
+          {errors &&
+            findErrors("password").map((err, i) => (
+              <p className="errors" key={i}>
+                {err}
+              </p>
+            ))}
           <button onClick={handleSubmit} type="submit">
             Sign In
           </button>
         </form>
         <NoAccountButton {...props} />
       </div>
+      <BackButton {...props} />
     </div>
   );
 };
