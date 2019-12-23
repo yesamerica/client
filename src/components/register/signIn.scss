@@ -16,6 +16,10 @@ $tablet: "(max-width:500px)";
     flex-direction: row;
   }
 
+  @media (orientation: landscape){
+    flex-direction: row;
+  }
+
   .signInLandingTop {
     //background: rgba();
     display: flex;
@@ -29,12 +33,19 @@ $tablet: "(max-width:500px)";
       height:100vh;
       width:auto;
     }
+    @media (orientation: landscape){
+      height:100vh;
+      width:auto;
+      background-image: linear-gradient(to right,blue, white);
+    }
   }
 
   .signInLandingBottom {
     height:50vh;
     display: flex;
     padding:5vw;
+    max-width: 70rem;
+    margin:auto;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
