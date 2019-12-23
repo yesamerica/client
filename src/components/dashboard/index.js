@@ -32,7 +32,6 @@ const DashBoard = props => {
         <Notifications />
         <Events />
         <LocalEvents />
-        <AppTray />
       </div>
     </div>
   );
