@@ -299,16 +299,18 @@ $tablet: "(max-width:500px)";
 }
 
 .BackButton, .NextButton, .FinishButton {
-  position: absolute;
+  position: fixed;
   bottom: 0;
- 
+  left:0;
+  right:0;
   padding: 0 ;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-
+  background-color: rgba(255,255,255,0.3);
+  border:none;
   h2 {
     font-size: 1.8rem;
     margin: 0;
