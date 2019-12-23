@@ -64,7 +64,7 @@ const ProviderOnboarding = props => {
           <input
             type="text"
             name="phone"
-            placeholder="cell"
+            placeholder="Cell"
             onChange={handleChanges}
           />
         </div>
