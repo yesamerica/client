@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logoWhite from "../../../images/logo_wh.svg";
-import FinishButton from '../buttons/FinishButton'
+import FinishButton from "../buttons/FinishButton";
 import { axiosWithAuth } from "../../../util/axiosWithAuth";
 const ProviderObTwo = props => {
   const [user, setUser] = useState({
@@ -32,10 +32,13 @@ const ProviderObTwo = props => {
   };
 
   return (
-    <div className="localSignIn">
-      <img className="logo" src={logoWhite} />
-      <h1>Please fill out some basic information about your practice</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="structuredPage">
+      <div className="pageTitle">
+        <img  src={logoWhite} />
+        <h2>Please fill out some basic information about your practice</h2>
+      </div>
+      <form className="pageContent" onSubmit={handleSubmit}>
+      
         <div>
           <input
             type="text"
@@ -61,7 +64,7 @@ const ProviderObTwo = props => {
           />
         </div>
       </form>
-      <FinishButton {...props}/>
+      <FinishButton {...props} />
     </div>
   );
 };

@@ -18,12 +18,10 @@ const LocalSignInForm = props => {
       ...user,
       [e.target.name]: e.target.value
     });
-    console.log("user", user);
   };
 
   const findErrors = key => {
     let relativeErrors = [];
-    console.log(errors);
     errors &&
       errors.map(error => {
         error[key] && relativeErrors.push(error[key]);
@@ -33,7 +31,6 @@ const LocalSignInForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("user", user);
     axiosWithAuth()
       .post("/login", user)
       .then(res => {
@@ -41,7 +38,6 @@ const LocalSignInForm = props => {
           localStorage.setItem("token", res.data.token);
           props.history.push("/signin");
         } else {
-          console.log(res.data.errors);
           setErros(res.data.errors);
         }
       })
@@ -49,10 +45,12 @@ const LocalSignInForm = props => {
   };
 
   return (
-    <div className="localSignIn">
-      <img className="logo" src={logoWhite} />
-      <div>
-        <form onSubmit={handleSubmit}>
+    <div className="structuredPage">
+      <div className="pageTitle">
+        <img src={logoWhite} />
+      </div>
+    
+        <form className="pageContent" onSubmit={handleSubmit}>
           <div>
             <img src={userIcon} alt="Standard white user icon" />
             <input
@@ -86,9 +84,9 @@ const LocalSignInForm = props => {
           <button onClick={handleSubmit} type="submit">
             Sign In
           </button>
+          <NoAccountButton {...props} />
         </form>
-        <NoAccountButton {...props} />
-      </div>
+        
       <BackButton {...props} />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logoWhite from "../../../images/logo_wh.svg";
-import NextButton from '../buttons/NextButton'
+import NextButton from "../buttons/NextButton";
 import { axiosWithAuth } from "../../../util/axiosWithAuth";
 const ProviderOnboarding = props => {
   const [user, setUser] = useState({
@@ -32,13 +32,13 @@ const ProviderOnboarding = props => {
   };
 
   return (
-    <div className="localSignIn">
+    <div className="structuredPage">
       <div className="pageTitle">
-      <img className="logo" src={logoWhite} />
-      <h2>Please fill out some basic information about your practice</h2>
+        <img className="logo" src={logoWhite} />
+        <h2>Please fill out some basic information about your practice</h2>
       </div>
-      <form onSubmit={handleSubmit}>
-     
+      <form className="pageContent" onSubmit={handleSubmit}>
+        
         <div>
           <input
             type="text"
@@ -72,7 +72,7 @@ const ProviderOnboarding = props => {
           />
         </div>
       </form>
-      <NextButton {...props} goto="/new-account/provider-two"/>
+      <NextButton {...props} goto="/new-account/provider-two" />
     </div>
   );
 };

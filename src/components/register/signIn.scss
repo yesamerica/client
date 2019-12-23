@@ -3,294 +3,126 @@ $phone: "(max-width:500px)";
 $phone-land: "(orientation: landscape)";
 $tablet: "(max-width:500px)";
 
-.SignInLanding {
-  height: 100vh;
-  width: 100vw;
-  //max-width: 50rem;
-  margin: auto;
+.newAccount{
+  .pageTitle{
+    max-height:10vh;
+  }
+  .pageContent{
+    height:70vh;
+  }
+  .selectUserRole{
+    display: flex;
+    justify-content: space-between;
+    color:#fff;
+    img{
+      width:5rem;
+      margin:1rem
+    }
+  }
+}
+//Buttons
+.authButton{
+  width:65%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(45deg, #4f79ea, #ebc3bc);
-  @media #{$phone-land} {
-    flex-direction: row;
-  }
-
-  @media (orientation: landscape) {
-    flex-direction: row;
-  }
-
-  .signInLandingTop {
-    //background: rgba();
-    display: flex;
-    height: 50vh;
-    width: 100%;
-
-    background-repeat: no-repeat;
-    @media #{$phone-land} {
-      height: 100vh;
-      width: auto;
-    }
-    @media (orientation: landscape) {
-      height: 100vh;
-      width: auto;
-    }
-  }
-
-  .signInLandingBottom {
-    height: 50vh;
-    display: flex;
-    padding: 5vw;
-    max-width: 70rem;
-    margin: auto;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  background-size: 100%;
-  p {
-    font-size: 1.6rem;
-    margin: 5px auto;
-  }
-
-  img.logo {
-    max-width: 70%;
-    margin: auto;
-  }
-
-  img.signIn {
-    max-width: 70%;
-    margin: 15px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .authButton {
-    width: 100%;
-    margin: 0 0 15px 0;
-    display: flex;
-    justify-content: center;
-
-    button {
-      width: 50%;
-      border: none;
-      padding: 10px 0;
-      color: #fff;
-      font-size: 1.4rem;
-    }
-    .fb_login {
-      background: #3d5d9c;
-    }
-
-    .fa-facebook-f {
-      color: #fff;
-      font-size: 1.8rem;
-      background: #314a7d;
-      padding: 1.4rem 2rem;
-    }
-
-    .fa-google-plus-g {
-      color: #fff;
-      font-size: 1.8rem;
-      background: #b03e20;
-      padding: 15px;
-    }
-    .google_login {
-      background: #dc4d28;
-    }
-  }
-}
-
-.pageTitle {
-  h2 {
-    margin: 20px auto;
-    color: #fff;
-    font-size: 1.8rem;
-    margin: 5rem auto;
+  color: #fff;
+  font-size: 1.6rem;
+  span{
     text-align: center;
+    width:90%;
+    text-align:center;
   }
-
-  @media #{$phone-land} {
-    height: 100vh;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.localSignIn {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-image: linear-gradient(45deg, #4f79ea, #ebc3bc);
-  padding: 5rem;
-
-  @media (orientation: landscape) {
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-image: linear-gradient(-128deg, #4f79ea, #ebc3bc);
-    > * {
-      max-width: 40%;
-    }
-  }
-  .errors {
-    color: #ddd;
-    width: 100%;
-    text-align: left;
-    font-size: 1.4rem;
-    padding-left: 1rem;
-  }
-  p {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  form {
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    div {
-      border-bottom: 1px solid #fff;
-      display: flex;
-      width: 100%;
-      margin: 1rem;
-      img {
-        width: 2rem;
-      }
-    }
-    input {
-      width: 100%;
-      border: none;
-      background: none;
-      color: #fff;
-      font-size: 1.6rem;
-      margin: 15px;
-      &:focus {
-        outline: none;
-      }
-      &:active {
-        color: #fff;
-      }
-    }
-    button {
-      background: none;
-      color: #fff;
-      border: none;
-      font-size: 2rem;
-      padding: 1rem;
-      &:focus {
-        outline: none;
-      }
-      &:active,
-      &:hover {
-        color: #ddd;
-      }
-    }
+  @media #{$phone-land}{
+    width:70%;
   }
 }
 
-.noAccount {
-  height: 100vh;
-  width: 100vw;
+.NoAccountButton{
+  font-size: 1.6rem;
+  color: #18247c;
+}
+
+.LocalSignInButton{
+  width:100%;
+  background:#18247c;
+  padding:.8rem;
+  border-radius: 1.5rem;
+  i{
+    font-size:2.2rem;
+  }
+  
+}
+
+.fb_login {
+  background: #3d5d9c;
+  .fa-facebook-f {
+    background: #314a7d;
+    padding: 1rem 2rem;
+  }
+}
+
+.google_login {
+  background: #dc4d28;
+  .fa-google-plus-g {
+    background: #b03e20;
+    padding: 1rem 15px;
+  }
+}
+
+//Form 
+form.pageContent {
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  background-image: linear-gradient(45deg, #4f79ea, #ebc3bc);
-  color: #fff;
-
-  img.logo {
-    position: absolute;
-    top: 7%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
-  }
+  
+  
   div {
+    border-bottom: 1px solid #fff;
     display: flex;
-    align-items: center;
-    margin: 0.5rem 1.5rem;
-
+    width: 100%;
+    margin: 1rem;
+    @media #{$phone-land}{
+      margin:0;
+      padding:0;
+    }
     img {
-      margin: 1rem;
-      width: 6rem;
+      width: 2rem;
     }
   }
-  h2 {
-    font-weight: lighter;
-    font-size: 1.7rem;
-    margin: 1.8rem;
-  }
-}
-
-.localRegister {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-image: linear-gradient(45deg, #4f79ea, #ebc3bc);
-  @media (orientation: landscape) {
-    flex-direction: row;
-    justify-content: space-around;
-    > * {
-      width: 40%;
+  input {
+    width: 100%;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 15px;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      color: #fff;
     }
   }
-  img {
-    max-width: 70%;
-  }
-  form {
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    .errors {
+  button {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    padding: 1rem;
+    &:focus {
+      outline: none;
+    }
+    &:active,
+    &:hover {
       color: #ddd;
-      width: 100%;
-      font-size: 1.4rem;
-      padding-left: 1rem;
     }
-    div {
-      border-bottom: 1px solid #fff;
-      display: flex;
-      margin: 1rem;
-      img {
-        width: 2rem;
-      }
-    }
-    input {
-      border: none;
-      background: none;
-      color: #fff;
-      font-size: 1.8rem;
-      margin: 15px 0;
-      &:focus {
-        outline: none;
-        background-color: none;
-      }
-    }
-    button {
-      background: none;
-      color: #fff;
-      border: none;
-      font-size: 2rem;
-      padding: 1rem;
-      &:focus {
-        outline: none;
-      }
-      &:active,
-      &:hover {
-        color: #ddd;
-      }
-    }
+  }
+
+  @media #{$phone-land}{
+    margin:0;
+    padding:0;
   }
 }
 
@@ -313,7 +145,6 @@ $tablet: "(max-width:500px)";
     font-size: 1.8rem;
     margin: 0;
   }
-
   img {
     margin: 0.3rem 1rem;
     width: 1.4rem;
@@ -328,20 +159,10 @@ $tablet: "(max-width:500px)";
   }
 }
 
-.NoAccountButton {
-  color: #18247c;
+.errors {
+  color: #ddd;
+  width: 100%;
+  text-align: left;
+  font-size: 1.4rem;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-box-shadow: #ddd;
-  -webkit-text-fill-color: #fff;
-  transition: background-color 5000s ease-in-out 0s;
-}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logoWhite from "../../../images/logo_wh.svg";
-import FinishButton from '../buttons/FinishButton'
+import FinishButton from "../buttons/FinishButton";
 import { axiosWithAuth } from "../../../util/axiosWithAuth";
 const SponsorOnboarding = props => {
   const [user, setUser] = useState({
@@ -32,10 +32,13 @@ const SponsorOnboarding = props => {
   };
 
   return (
-    <div className="localSignIn">
-      <img className="logo" src={logoWhite} />
-      <h2>Lets get started</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="structuredPage">
+      <div className="pageTitle">
+        <img src={logoWhite} />
+        <h2>Lets get started</h2>
+      </div>
+      <form className="pageContent" onSubmit={handleSubmit}>
+        
         <div>
           <input
             type="text"
@@ -69,7 +72,7 @@ const SponsorOnboarding = props => {
           />
         </div>
       </form>
-      <FinishButton {...props}/>
+      <FinishButton {...props} />
     </div>
   );
 };

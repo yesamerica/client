@@ -18,34 +18,36 @@ const LocalRegisterForm = props => {
     });
   };
 
-  const findErrors = (key) => {
-    let relativeErrors = []
-    errors && errors.map(error =>{
-      error[key] && relativeErrors.push(error[key])
-    })
-    return relativeErrors
-  }
-  
+  const findErrors = key => {
+    let relativeErrors = [];
+    errors &&
+      errors.map(error => {
+        error[key] && relativeErrors.push(error[key]);
+      });
+    return relativeErrors;
+  };
+
   const handleSubmit = e => {
     e.preventDefault();
     axiosWithAuth()
       .post("/register", user)
       .then(res => {
         if (res.data.token) {
-          localStorage.setItem("token", res.data.token)
-          props.history.push('/new-account')
+          localStorage.setItem("token", res.data.token);
+          props.history.push("/new-account");
         } else {
-          setErros(res.data.errors)
+          setErros(res.data.errors);
         }
       })
       .catch(res => console.log(res.data));
   };
-  console.log(errors)
+
   return (
-    <div className="localRegister">
-      <img className="logo" src={logoWhite} />
-      <form onSubmit={handleSubmit}>
-      
+    <div className="structuredPage">
+      <div className="pageTitle">
+        <img src={logoWhite} />
+      </div>
+      <form className="pageContent" onSubmit={handleSubmit}>
         <div>
           <input
             type="email"
@@ -53,11 +55,14 @@ const LocalRegisterForm = props => {
             placeholder="Email"
             onChange={handleChanges}
           />
-          
         </div>
-        {errors && findErrors('email').map((err,i)=><p className="errors" key={i}>{err}</p>)}
+        {errors &&
+          findErrors("email").map((err, i) => (
+            <p className="errors" key={i}>
+              {err}
+            </p>
+          ))}
         <div>
-        
           <input
             type="password"
             name="password"
@@ -65,9 +70,16 @@ const LocalRegisterForm = props => {
             onChange={handleChanges}
           />
         </div>
-        {errors && findErrors('password').map((err,i)=><p className='errors' key={i}>{err}</p>)}
+        {errors &&
+          findErrors("password").map((err, i) => (
+            <p className="errors" key={i}>
+              {err}
+            </p>
+          ))}
 
-        <button onClick={handleSubmit} type="submit">Sign Up</button>
+        <button onClick={handleSubmit} type="submit">
+          Sign Up
+        </button>
       </form>
       <BackButton {...props} />
     </div>
