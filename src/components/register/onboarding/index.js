@@ -14,7 +14,7 @@ const Onboarding = props => {
         <Route path={`/new-account/company`} component={CompanyOnboarding} />
         <Route path="/new-account/provider" component={ProviderOnboarding} />
         <Route
-          path="/new-account/individaul"
+          path="/new-account/individual"
           component={IndividualOnboarding}
         />
         <Route path="/new-account/sponsor" component={SponsorOnboarding} />

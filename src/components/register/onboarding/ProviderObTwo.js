@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logoWhite from "../../../images/logo_wh.svg";
 import FinishButton from '../buttons/FinishButton'
 import { axiosWithAuth } from "../../../util/axiosWithAuth";
-const Individual = props => {
+const ProviderObTwo = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -34,29 +34,29 @@ const Individual = props => {
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
-      <h1>Lets get started</h1>
+      <h1>Please fill out some basic information about your practice</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
-            name="fname"
-            placeholder="First name"
+            name="company"
+            placeholder="Company name"
             onChange={handleChanges}
           />
         </div>
         <div>
           <input
             type="text"
-            name="lname"
-            placeholder="Last name"
+            name="Address"
+            placeholder="Office address"
             onChange={handleChanges}
           />
         </div>
         <div>
           <input
             type="text"
-            name="phone"
-            placeholder="Phone"
+            name="radius"
+            placeholder="Radius of Service:8"
             onChange={handleChanges}
           />
         </div>
@@ -66,4 +66,4 @@ const Individual = props => {
   );
 };
 
-export default Individual;
+export default ProviderObTwo;

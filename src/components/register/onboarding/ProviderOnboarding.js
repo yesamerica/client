@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import userIcon from "../../../images/user_icon.svg";
-import pwIcon from "../../../images/pw_icon.svg";
 import logoWhite from "../../../images/logo_wh.svg";
-import NoAccountButton from "../buttons/NoAccountButton";
+import NextButton from '../buttons/NextButton'
 import { axiosWithAuth } from "../../../util/axiosWithAuth";
 const ProviderOnboarding = props => {
   const [user, setUser] = useState({
@@ -36,30 +34,42 @@ const ProviderOnboarding = props => {
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
+      <h1>Please fill out some basic information about your practice</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <img src={userIcon} alt="Standard white user icon" />
           <input
             type="text"
-            name="email"
-            placeholder="email"
+            name="fname"
+            placeholder="First name"
             onChange={handleChanges}
           />
         </div>
         <div>
-          <img src={pwIcon} alt="Standard white lock icon" />
           <input
-            type="password"
-            name="password"
-            placeholder="Password"
+            type="text"
+            name="lname"
+            placeholder="Last name"
             onChange={handleChanges}
           />
         </div>
-        <button onClick={handleSubmit} type="submit">
-          Sign In
-        </button>
+        <div>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Office Number"
+            onChange={handleChanges}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="phone"
+            placeholder="cell"
+            onChange={handleChanges}
+          />
+        </div>
       </form>
-      <NoAccountButton {...props} />
+      <NextButton {...props} goto="/new-account/provider-two"/>
     </div>
   );
 };
