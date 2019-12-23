@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import logoWhite from "../../../images/logo_wh.svg";
-import FinishButton from '../buttons/FinishButton'
+import NextButton from '../buttons/NextButton'
 import { axiosWithAuth } from "../../../util/axiosWithAuth";
-const Individual = props => {
+const ProviderOnboarding = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -34,7 +34,7 @@ const Individual = props => {
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
-      <h2>Lets get started</h2>
+      <h2>Please fill out some basic information about your practice</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input
@@ -56,14 +56,22 @@ const Individual = props => {
           <input
             type="text"
             name="phone"
-            placeholder="Phone"
+            placeholder="Office Number"
+            onChange={handleChanges}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            name="phone"
+            placeholder="cell"
             onChange={handleChanges}
           />
         </div>
       </form>
-      <FinishButton {...props}/>
+      <NextButton {...props} goto="/new-account/provider-two"/>
     </div>
   );
 };
 
-export default Individual;
+export default ProviderOnboarding;

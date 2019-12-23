@@ -33,9 +33,12 @@ const ProviderOnboarding = props => {
 
   return (
     <div className="localSignIn">
+      <div className="pageTitle">
       <img className="logo" src={logoWhite} />
-      <h1>Please fill out some basic information about your practice</h1>
+      <h2>Please fill out some basic information about your practice</h2>
+      </div>
       <form onSubmit={handleSubmit}>
+     
         <div>
           <input
             type="text"

@@ -34,8 +34,9 @@ const CompanyOnboarding = props => {
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
-      <h1>Lets get started</h1>
+      
       <form onSubmit={handleSubmit}>
+      <h2>Lets get started</h2>
         <div>
           <input
             type="text"
