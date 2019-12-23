@@ -33,12 +33,9 @@ const ProviderOnboarding = props => {
 
   return (
     <div className="localSignIn">
-      <div className="pageTitle">
       <img className="logo" src={logoWhite} />
       <h2>Please fill out some basic information about your practice</h2>
-      </div>
       <form onSubmit={handleSubmit}>
-     
         <div>
           <input
             type="text"
@@ -67,7 +64,7 @@ const ProviderOnboarding = props => {
           <input
             type="text"
             name="phone"
-            placeholder="Cell"
+            placeholder="cell"
             onChange={handleChanges}
           />
         </div>

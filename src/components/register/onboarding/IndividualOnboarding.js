@@ -34,7 +34,7 @@ const Individual = props => {
   return (
     <div className="localSignIn">
       <img className="logo" src={logoWhite} />
-      <h1>Lets get started</h1>
+      <h2>Lets get started</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input
