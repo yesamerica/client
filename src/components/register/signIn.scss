@@ -3,55 +3,70 @@ $phone: "(max-width:500px)";
 $phone-land: "(orientation: landscape)";
 $tablet: "(max-width:500px)";
 
-.newAccount{
-  .pageTitle{
-    max-height:10vh;
+.newAccount {
+  .pageTitle {
+    max-height: 10vh;
   }
-  .pageContent{
-    height:70vh;
+  .pageContent {
+    height: 70vh;
   }
-  .selectUserRole{
+  .selectUserRole {
     display: flex;
     justify-content: space-between;
-    color:#fff;
-    img{
-      width:5rem;
-      margin:1rem
+    color: #fff;
+    img {
+      width: 5rem;
+      margin: 1rem;
+    }
+  }
+  @media #{$phone-land}{
+    max-height:100vh;
+    .pageTitle{
+      display: none !important;
+      img{
+        display: none;
+      }
+    }
+    .pageContent{
+      max-width:70vw;
+      flex-wrap: wrap ;
+      > *{
+        width:50%;
+      }
     }
   }
 }
 //Buttons
-.authButton{
-  width:65%;
+.authButton {
+  width: 65%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
   font-size: 1.6rem;
-  span{
+  span {
     text-align: center;
-    width:90%;
-    text-align:center;
+    width: 90%;
+    text-align: center;
   }
-  @media #{$phone-land}{
-    width:70%;
+  @media #{$phone-land} {
+    width: 70%;
   }
 }
 
-.NoAccountButton{
+.NoAccountButton {
   font-size: 1.6rem;
   color: #18247c;
 }
 
-.LocalSignInButton{
-  width:100%;
-  background:#18247c;
-  padding:.8rem;
+.LocalSignInButton {
+  width: 100%;
+  background: #18247c;
+  padding: 0.8rem;
   border-radius: 1.5rem;
-  i{
-    font-size:2.2rem;
+  i {
+    font-size: 2.2rem;
   }
-  
 }
 
 .fb_login {
@@ -70,22 +85,20 @@ $tablet: "(max-width:500px)";
   }
 }
 
-//Form 
+//Form
 form.pageContent {
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
-  
   div {
     border-bottom: 1px solid #fff;
     display: flex;
     width: 100%;
     margin: 1rem;
-    @media #{$phone-land}{
-      margin:0;
-      padding:0;
+    @media #{$phone-land} {
+      margin: 0;
+      padding: 0;
     }
     img {
       width: 2rem;
@@ -120,9 +133,9 @@ form.pageContent {
     }
   }
 
-  @media #{$phone-land}{
-    margin:0;
-    padding:0;
+  @media #{$phone-land} {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -165,4 +178,3 @@ form.pageContent {
   text-align: left;
   font-size: 1.4rem;
 }
-
