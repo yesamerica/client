@@ -37,7 +37,7 @@ const CompanyOnboarding = props => {
         <img src={logoWhite} />
         <h2>Lets get started</h2>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form className="pageContent" onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
