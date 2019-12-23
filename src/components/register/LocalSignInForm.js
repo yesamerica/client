@@ -56,7 +56,7 @@ const LocalSignInForm = props => {
             <input
               type="text"
               name="email"
-              placeholder="email"
+              placeholder="Email"
               onChange={handleChanges}
             />
           </div>

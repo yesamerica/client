@@ -115,6 +115,14 @@ $tablet: "(max-width:500px)";
   background-image: url("../../images/login_account_bg.svg");
   background-size: cover;
   padding: 5rem;
+  
+  @media (orientation: landscape){
+    flex-direction: row;
+    justify-content: space-evenly;
+    > *{
+      max-width: 40%;
+    }
+  }
   .errors {
     color: #ddd;
     width: 100%;
@@ -134,6 +142,7 @@ $tablet: "(max-width:500px)";
     div {
       border-bottom: 1px solid #adadad;
       display: flex;
+      width:100%;
       margin: 1rem;
       img {
         width: 2rem;
@@ -167,6 +176,7 @@ $tablet: "(max-width:500px)";
       }
     }
   }
+  
 }
 
 .noAccount {
@@ -210,17 +220,19 @@ $tablet: "(max-width:500px)";
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   background-image: url("../../images/login_account_bg.svg");
   background-size: cover;
-  img.logo {
-    position: absolute;
-    top: 7%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
+  @media (orientation: landscape){
+    flex-direction: row;
+    justify-content: space-around;
+    > *{
+      width: 40%;
+    }
+  }
+  img{
+    max-width: 70%;
   }
   form {
     margin: 2rem 0;
