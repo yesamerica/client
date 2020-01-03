@@ -19,19 +19,19 @@ $tablet: "(max-width:500px)";
       margin: 1rem;
     }
   }
-  @media #{$phone-land}{
-    max-height:100vh;
-    .pageTitle{
+  @media #{$phone-land} {
+    max-height: 100vh;
+    .pageTitle {
       display: none !important;
-      img{
+      img {
         display: none;
       }
     }
-    .pageContent{
-      max-width:70vw;
-      flex-wrap: wrap ;
-      > *{
-        width:50%;
+    .pageContent {
+      max-width: 70vw;
+      flex-wrap: wrap;
+      > * {
+        width: 50%;
       }
     }
   }
@@ -141,7 +141,8 @@ form.pageContent {
 
 .BackButton,
 .NextButton,
-.FinishButton {
+.FinishButton,
+.SignInButton {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -152,7 +153,7 @@ form.pageContent {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, .6);
   border: none;
   h2 {
     font-size: 1.8rem;
@@ -165,7 +166,8 @@ form.pageContent {
 }
 
 .NextButton,
-.FinishButton {
+.FinishButton,
+.SignInButton {
   img {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -177,4 +179,40 @@ form.pageContent {
   width: 100%;
   text-align: left;
   font-size: 1.4rem;
+}
+
+.SignInDrawer.active {
+  height:100vh;
+  width:100vw;
+  position: absolute;
+  bottom: -1rem;
+  left:-1rem;
+  background-color: rgba(0,0,0,.5);
+  .SignInButtonWrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    height: 50vh;
+    width: 100vw;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index:1;
+    &:nth-child(*) {
+      margin: auto;
+    }
+  }
+  transition: all 0.5s ease;
+}
+
+.SignInDrawer {
+  height: 0;
+  overflow: hidden;
+  .SignInButtonWrapper {
+    height:0;
+  }
 }
