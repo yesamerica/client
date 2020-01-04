@@ -1,26 +1,25 @@
 import React from "react";
-import OnboardingLanding from "./NewAccount";
-import CompanyOnboarding from "./CompanyOnboarding";
-import ProviderOnboarding from "./ProviderOnboarding";
-import ProviderObTwo from "./ProviderObTwo";
-import IndividualOnboarding from "./IndividualOnboarding";
-import SponsorOnboarding from "./SponsorOnboarding";
+import CompanyOnboarding from "./company/CompanyOnboarding";
+import ProviderOnboarding from "./provider/ProviderObOne";
+import ProviderObTwo from "./provider/ProviderObTwo";
+import IndividualOnboarding from "./individual/IndividualOnboarding";
+import SponsorOnboarding from "./sponsor/SponsorOnboarding";
 import { Route, Switch } from "react-router-dom";
 
 const Onboarding = props => {
-  console.log(props);
+  const {url} = props.match
   return (
     <>
       <Switch>
-        <Route path={`/new-account/company`} component={CompanyOnboarding} />
-        <Route path="/new-account/provider" component={ProviderOnboarding} />
-        <Route path="/new-account/provider-two" component={ProviderObTwo} />
+        <Route path={`${url}/company`} component={CompanyOnboarding} />
+        <Route path={`${url}/provider`} component={ProviderOnboarding} />
+        <Route path={`${url}/provider-two`} component={ProviderObTwo} />
         <Route
-          path="/new-account/individual"
+          path={`${url}/individual`}
           component={IndividualOnboarding}
         />
-        <Route path="/new-account/sponsor" component={SponsorOnboarding} />
-        <Route path="/new-account" component={OnboardingLanding} />
+        <Route path={`${url}/sponsor`} component={SponsorOnboarding} />
+  
       </Switch>
     </>
   );

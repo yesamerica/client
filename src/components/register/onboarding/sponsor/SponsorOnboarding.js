@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logoWhite from "../../../images/logo_wh.svg";
-import FinishButton from "../buttons/FinishButton";
-import { axiosWithAuth } from "../../../util/axiosWithAuth";
-const CompanyOnboarding = props => {
+import logoWhite from "../../../../images/logo_wh.svg";
+import FinishButton from "../../buttons/FinishButton";
+import { axiosWithAuth } from "../../../../util/axiosWithAuth";
+const SponsorOnboarding = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -38,6 +38,7 @@ const CompanyOnboarding = props => {
         <h2>Lets get started</h2>
       </div>
       <form className="pageContent" onSubmit={handleSubmit}>
+        
         <div>
           <input
             type="text"
@@ -58,7 +59,7 @@ const CompanyOnboarding = props => {
           <input
             type="text"
             name="company"
-            placeholder="Company / Organization"
+            placeholder="Company"
             onChange={handleChanges}
           />
         </div>
@@ -66,22 +67,9 @@ const CompanyOnboarding = props => {
           <input
             type="text"
             name="phone"
-            placeholder="Direct phone"
+            placeholder="Phone"
             onChange={handleChanges}
           />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="Address"
-            placeholder="Address"
-            onChange={handleChanges}
-          />
-        </div>
-
-        <div>
-          <h2>Number of Employees</h2>
-          <input type="number" name="employee_count" onChange={handleChanges} />
         </div>
       </form>
       <FinishButton {...props} />
@@ -89,4 +77,4 @@ const CompanyOnboarding = props => {
   );
 };
 
-export default CompanyOnboarding;
+export default SponsorOnboarding;

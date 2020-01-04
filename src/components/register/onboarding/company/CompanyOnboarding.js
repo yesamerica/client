@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logoWhite from "../../../images/logo_wh.svg";
-import NextButton from "../buttons/NextButton";
-import { axiosWithAuth } from "../../../util/axiosWithAuth";
-const ProviderOnboarding = props => {
+import logoWhite from "../../../../images/logo_wh.svg";
+import FinishButton from "../../buttons/FinishButton";
+import { axiosWithAuth } from "../../../../util/axiosWithAuth";
+const CompanyOnboarding = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -34,11 +34,10 @@ const ProviderOnboarding = props => {
   return (
     <div className="structuredPage">
       <div className="pageTitle">
-        <img className="logo" src={logoWhite} />
-        <h2>Please fill out some basic information about your practice</h2>
+        <img src={logoWhite} />
+        <h2>Lets get started</h2>
       </div>
       <form className="pageContent" onSubmit={handleSubmit}>
-        
         <div>
           <input
             type="text"
@@ -58,8 +57,8 @@ const ProviderOnboarding = props => {
         <div>
           <input
             type="text"
-            name="phone"
-            placeholder="Office Number"
+            name="company"
+            placeholder="Company / Organization"
             onChange={handleChanges}
           />
         </div>
@@ -67,14 +66,27 @@ const ProviderOnboarding = props => {
           <input
             type="text"
             name="phone"
-            placeholder="Cell"
+            placeholder="Direct phone"
             onChange={handleChanges}
           />
         </div>
+        <div>
+          <input
+            type="text"
+            name="Address"
+            placeholder="Address"
+            onChange={handleChanges}
+          />
+        </div>
+
+        <div>
+          <h2>Number of Employees</h2>
+          <input type="number" name="employee_count" onChange={handleChanges} />
+        </div>
       </form>
-      <NextButton {...props} goto="/new-account/provider-two" />
+      <FinishButton {...props} />
     </div>
   );
 };
 
-export default ProviderOnboarding;
+export default CompanyOnboarding;

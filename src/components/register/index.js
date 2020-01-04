@@ -14,7 +14,7 @@ const SignInCanvas = props => {
         <Route exact path="/" component={SignInLanding} />
         <Route exact path="/register" component={LocalRegisterForm} />
         <Route exact path="/signin" component={LocalSignupForm} />
-        <Route match path="/new-account" component={Onboarding} />
+        <Route match path="/onboarding/" component={Onboarding} />
       </Switch>
     </div>
   );

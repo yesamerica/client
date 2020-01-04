@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logoWhite from "../../../images/logo_wh.svg";
-import FinishButton from "../buttons/FinishButton";
-import { axiosWithAuth } from "../../../util/axiosWithAuth";
-const Individual = props => {
+import logoWhite from "../../../../images/logo_wh.svg";
+import FinishButton from "../../buttons/FinishButton";
+import { axiosWithAuth } from "../../../../util/axiosWithAuth";
+const ProviderObTwo = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -34,32 +34,32 @@ const Individual = props => {
   return (
     <div className="structuredPage">
       <div className="pageTitle">
-        <img src={logoWhite} />
-        <h2>Lets get started</h2>
+        <img  src={logoWhite} />
+        <h2>Select all that apply</h2>
       </div>
       <form className="pageContent" onSubmit={handleSubmit}>
       
         <div>
           <input
             type="text"
-            name="fname"
-            placeholder="First name"
+            name="company"
+            placeholder="Company name"
             onChange={handleChanges}
           />
         </div>
         <div>
           <input
             type="text"
-            name="lname"
-            placeholder="Last name"
+            name="Address"
+            placeholder="Office address"
             onChange={handleChanges}
           />
         </div>
         <div>
           <input
             type="text"
-            name="phone"
-            placeholder="Phone"
+            name="radius"
+            placeholder="Radius of Service:8"
             onChange={handleChanges}
           />
         </div>
@@ -69,4 +69,4 @@ const Individual = props => {
   );
 };
 
-export default Individual;
+export default ProviderObTwo;

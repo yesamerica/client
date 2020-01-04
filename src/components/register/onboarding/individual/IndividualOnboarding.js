@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logoWhite from "../../../images/logo_wh.svg";
-import FinishButton from "../buttons/FinishButton";
-import { axiosWithAuth } from "../../../util/axiosWithAuth";
-const SponsorOnboarding = props => {
+import logoWhite from "../../../../images/logo_wh.svg";
+import FinishButton from "../../buttons/FinishButton";
+import { axiosWithAuth } from "../../../../util/axiosWithAuth";
+const Individual = props => {
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -38,7 +38,7 @@ const SponsorOnboarding = props => {
         <h2>Lets get started</h2>
       </div>
       <form className="pageContent" onSubmit={handleSubmit}>
-        
+      
         <div>
           <input
             type="text"
@@ -58,14 +58,6 @@ const SponsorOnboarding = props => {
         <div>
           <input
             type="text"
-            name="company"
-            placeholder="Company"
-            onChange={handleChanges}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
             name="phone"
             placeholder="Phone"
             onChange={handleChanges}
@@ -77,4 +69,4 @@ const SponsorOnboarding = props => {
   );
 };
 
-export default SponsorOnboarding;
+export default Individual;

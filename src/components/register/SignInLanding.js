@@ -19,7 +19,7 @@ const SignInLanding = props => {
   console.log(active);
   const actType = e => {
     console.log(e.currentTarget.id);
-    props.history.push(`/new-account/${e.currentTarget.id}`);
+    props.history.push(`/onboarding/${e.currentTarget.id}`);
   };
   return (
     <div className="structuredPage newAccount">
