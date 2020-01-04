@@ -3,20 +3,42 @@ $phone: "(max-width:500px)";
 $phone-land: "(orientation: landscape)";
 $tablet: "(max-width:500px)";
 
-.newAccount {
+.structuredPage.newAccount {
+  justify-content: space-between;
   .pageTitle {
-    max-height: 10vh;
   }
   .pageContent {
     height: 70vh;
+    margin-bottom: 5rem;
+    justify-content: center;
+    
   }
   .selectUserRole {
+    margin:.25vh auto;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     color: #fff;
-    img {
+    h2{
+      font-size: 1.3rem;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: stretch;
       width: 5rem;
-      margin: 1rem;
+      margin:1rem 2rem;
+      p{
+        margin:.5rem;
+        padding:0;
+        font-size: .9rem;
+      }
+      img {
+        margin:auto;
+      }
     }
   }
   @media #{$phone-land} {
@@ -147,13 +169,13 @@ form.pageContent {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0;
+  padding: 1rem;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  background-color: rgba(255, 255, 255, .6);
+  background-color: rgba(255, 255, 255, 1);
   border: none;
   h2 {
     font-size: 1.8rem;
@@ -182,12 +204,12 @@ form.pageContent {
 }
 
 .SignInDrawer.active {
-  height:100vh;
-  width:100vw;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
   bottom: -1rem;
-  left:-1rem;
-  background-color: rgba(0,0,0,.5);
+  left: -1rem;
+  background-color: rgba(0, 0, 0, 0.5);
   .SignInButtonWrapper {
     position: absolute;
     bottom: 0;
@@ -199,11 +221,14 @@ form.pageContent {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    z-index:1;
+    z-index: 1;
     &:nth-child(*) {
       margin: auto;
+    }
+    button {
+      margin: 5%;
     }
   }
   transition: all 0.5s ease;
@@ -213,6 +238,6 @@ form.pageContent {
   height: 0;
   overflow: hidden;
   .SignInButtonWrapper {
-    height:0;
+    height: 0;
   }
 }
