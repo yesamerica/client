@@ -241,3 +241,42 @@ form.pageContent {
     height: 0;
   }
 }
+
+
+.structuredPage.provider{
+  display: flex;
+  flex-direction: column;
+  color:#fff;
+  font-size: 1.8rem;
+  .pageContent{
+    div{
+      border-bottom: none;
+      
+      align-items: center;
+    }
+    .upperGroup{
+      flex-direction: column;
+      margin-left:5rem;
+    }
+  }
+}
+
+.chkBox{
+  margin:0;
+  width:1.6rem;
+  height:1.6rem;
+  max-height: 1.6rem;
+  max-width: 1.6rem;
+  padding:0;
+  position: relative;
+  .checked{
+    color:black;
+    position: absolute;
+    font-size: 3rem;
+    margin:0;
+    top:-1.7rem;
+    left:-.1rem;
+  }
+  border-radius:.2rem;
+  background:#ddd;
+}
