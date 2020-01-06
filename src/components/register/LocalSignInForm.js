@@ -45,7 +45,7 @@ const LocalSignInForm = props => {
   };
 
   return (
-    <div className="structuredPage">
+    <div className="structuredPage signin">
       <div className="pageTitle">
         <img src={logoWhite} />
       </div>
@@ -81,10 +81,19 @@ const LocalSignInForm = props => {
                 {err}
               </p>
             ))}
+          <div>
+            <img src={userIcon} alt="Standard white lock icon" />
+            <input
+              type="text"
+              name="fname"
+              placeholder="First Name"
+              onChange={handleChanges}
+            />
+          </div>
           <button onClick={handleSubmit} type="submit">
             Sign In
           </button>
-          <NoAccountButton {...props} />
+
         </form>
         
       <BackButton {...props} />

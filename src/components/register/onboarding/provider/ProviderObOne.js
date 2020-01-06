@@ -5,19 +5,8 @@ import { axiosWithAuth } from "../../../../util/axiosWithAuth";
 import CheckBox from "../../../formparts/CheckBox";
 const ProviderOnboarding = props => {
   console.log("propsPro", props);
-  const [user, setUser] = useState({
-    email: "",
-    password: ""
-  });
-
-  const handleChanges = e => {
-    e.preventDefault();
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value
-    });
-    console.log("user", user);
-  };
+  const [user, setUser] = useState();
+  const [isTrue,setIsTrue]= useState(false)
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -32,7 +21,7 @@ const ProviderOnboarding = props => {
       })
       .catch(err => console.log(err));
   };
-
+ 
   return (
     <div className="structuredPage  provider">
       <div className="pageTitle">
@@ -41,33 +30,33 @@ const ProviderOnboarding = props => {
       </div>
       <form className="pageContent" onSubmit={handleSubmit}>
         <div>
-          <CheckBox />
+          <CheckBox isTrue={isTrue} setIsTrue={setIsTrue}/>
           <div>I want to do events for</div>
         </div>
         <div className="upperGroup">
           <div>
-            <CheckBox />
+            <CheckBox isTrue={isTrue}/>
             <div>Companies & Organizations</div>
           </div>
           <div>
-            <CheckBox />
+            <CheckBox isTrue={isTrue}/>
             <div>Events created by individuals and groups</div>
           </div>
         </div>
         {/* end upperGroup */}
 
         <div>
-          <CheckBox />
+          <CheckBox isTrue={isTrue}/>
           <div>I want to create my own events</div>
           <input name="chk3" type="hidden" />
         </div>
         <div>
-          <CheckBox />
+          <CheckBox isTrue={isTrue}/>
           <div>I want to list my services and get bookings</div>
           <input name="chk4" type="hidden" />
         </div>
       </form>
-      <NextButton {...props} goto="/new-account/provider-two" />
+      <NextButton {...props} goto="/signin" />
     </div>
   );
 };

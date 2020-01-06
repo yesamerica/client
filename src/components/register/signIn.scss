@@ -263,20 +263,21 @@ form.pageContent {
 
 .chkBox{
   margin:0;
-  width:1.6rem;
-  height:1.6rem;
-  max-height: 1.6rem;
-  max-width: 1.6rem;
+  width:2rem;
+  height:2rem;
+  max-height: 2rem;
+  max-width: 2rem;
   padding:0;
   position: relative;
+  border-radius:.8rem;
+  background:#ddd;
   .checked{
     color:black;
     position: absolute;
     font-size: 3rem;
     margin:0;
-    top:-1.7rem;
-    left:-.1rem;
+    top:-1.3rem;
+    
   }
-  border-radius:.2rem;
-  background:#ddd;
+  
 }
