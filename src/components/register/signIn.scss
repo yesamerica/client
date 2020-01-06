@@ -161,40 +161,7 @@ form.pageContent {
   }
 }
 
-.BackButton,
-.NextButton,
-.FinishButton,
-.SignInButton {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
-  background-color: rgba(255, 255, 255, 1);
-  border: none;
-  h2 {
-    font-size: 1.8rem;
-    margin: 0;
-  }
-  img {
-    margin: 0.3rem 1rem;
-    width: 1.4rem;
-  }
-}
 
-.NextButton,
-.FinishButton,
-.SignInButton {
-  img {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
-}
 
 .errors {
   color: #ddd;
@@ -261,6 +228,42 @@ form.pageContent {
   }
 }
 
+.AuthContainer{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  color:#fff;
+  border:none !important;
+  text-align: center;
+  div{
+    border:none !important;
+  }
+  span{
+    padding: 0 .7rem;
+  }
+  .fb_login {
+    padding:0;
+    background: #3d5d9c;
+    .fa-facebook-f {
+      background: #314a7d;
+      padding: 1rem 2rem;
+    }
+  }
+  
+  .google_login {
+    padding:0 0 0 0;
+    background: #dc4d28;
+    .fa-google-plus-g {
+      background: #b03e20;
+      padding: 1rem 15px;
+    }
+  }
+  button{
+    max-width:50%;
+    margin:5px;
+  }
+}
+
 .chkBox{
   margin:0;
   width:2rem;
@@ -280,4 +283,48 @@ form.pageContent {
     
   }
   
+}
+
+.structuredPage.Register{
+  .FinishButton{
+    left:-1rem;
+    bottom:-1rem;
+    background-color: #fff;
+    color:#314a7d;
+  }
+}
+
+.BackButton,
+.NextButton,
+.FinishButton,
+.SignInButton {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  img {
+    margin: 0.3rem 1rem;
+    width: 1.4rem;
+  }
+}
+
+.NextButton,
+.FinishButton,
+.SignInButton {
+  img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
 }

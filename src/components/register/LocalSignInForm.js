@@ -4,13 +4,10 @@ import pwIcon from "../../images/pw_icon.svg";
 import emailIcon from "../../images/email_icon.svg";
 import logoWhite from "../../images/logo_wh.svg";
 import { axiosWithAuth } from "../../util/axiosWithAuth";
-import BackButton from "./buttons/BackButton";
+import FinishButton from "./buttons/FinishButton";
 const LocalSignInForm = props => {
   const [errors, setErros] = useState([]);
-  const [user, setUser] = useState({
-    email: "",
-    password: ""
-  });
+  const [user, setUser] = useState();
 
   const handleChanges = e => {
     e.preventDefault();
@@ -30,13 +27,14 @@ const LocalSignInForm = props => {
   };
 
   const handleSubmit = e => {
+    console.log('SUBMITTED')
     e.preventDefault();
     axiosWithAuth()
       .post("/login", user)
       .then(res => {
         if (res.data.token) {
           localStorage.setItem("token", res.data.token);
-          props.history.push("/signin");
+          props.history.push("/dashboard");
         } else {
           setErros(res.data.errors);
         }
@@ -81,22 +79,12 @@ const LocalSignInForm = props => {
                 {err}
               </p>
             ))}
-          <div>
-            <img src={userIcon} alt="Standard white lock icon" />
-            <input
-              type="text"
-              name="fname"
-              placeholder="First Name"
-              onChange={handleChanges}
-            />
-          </div>
-          <button onClick={handleSubmit} type="submit">
-            Sign In
-          </button>
-
+         
+          
+          <FinishButton onClick={handleSubmit} {...props} />
         </form>
         
-      <BackButton {...props} />
+      
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.scss";
+import profileIcon from '../../images/profile_icon.svg';
 const Menu = props => {
   const openMenu = e => {
     e.currentTarget.classList.toggle("MenuActive");
@@ -11,9 +12,7 @@ const Menu = props => {
   return (
     <>
       <div className="Menu" onClick={openMenu}>
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
+        <img src={profileIcon} />
         <div className="MenuContainer">
           <nav>
             <Link to="/yo">My Account</Link>

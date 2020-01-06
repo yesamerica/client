@@ -56,7 +56,7 @@ const ProviderOnboarding = props => {
           <input name="chk4" type="hidden" />
         </div>
       </form>
-      <NextButton {...props} goto="/signin" />
+      <NextButton {...props} goto="/register" />
     </div>
   );
 };

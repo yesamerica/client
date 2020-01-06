@@ -2,6 +2,7 @@
 $tray-title-color: #18247c;
 .DashBoard {
   overflow: hidden;
+  background:#ebebeb;
   header {
     display: flex;
     justify-content: space-between;
@@ -32,98 +33,94 @@ $tray-title-color: #18247c;
 }
 
 .AppTray {
+  width: 100%;
   position: fixed;
-  background: url('../../images/bottom_bg.svg');
+  background:#fff;
   background-size:cover;
- 
+  border-top:1px solid #d9d9d9;
   bottom:0;
   left:0;
   right:0;
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
-  width: 100%;
+  
   padding:1rem 12rem;
   //background:#e7e7e7 ;
+  .IconWithText{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width:calc(100vw / 5);
+    img {
+      
+      height:3rem;
+      margin:auto;
+    }
+    p{
+      margin-bottom:0;
+    }
+  }
   
-  img {
-    margin: 0.3rem 1rem;
-    height:6rem;
-  }
-  &:first-child{
-    height:6.9rem;
-  }
 }
 
-.Notifications,.Events{
-  margin:1rem;
+.Notification{
   max-width:100%;
   width:100%;
-  margin:1rem auto;
+  margin:.5rem auto;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow:hidden;
   p{
     padding:0;
     margin:0;
   }
   .TrayTitle{
     display: flex;
-    background: #dad7d7;
+    justify-content: center;
+    
     align-items: center;
-    padding:.5rem;
-    font-size:1.8rem;
+  
+    text-align: center;
+    h2{
+      margin:1rem;
+      font-size:2rem;
+    }
+    
     color:$tray-title-color;
     img{
       margin:0 1rem;
       max-width:2.5rem;
     }
   }
-  
-}
 
-.Events {
-  .Event {
+  .TrayBody{
     padding:.5rem 2rem;
-    background: #e7e7e7;
     display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
     img {
-      width: 35%;
+      width: 15%;
     }
 
-    .EventData{
+    p{
+      width:80%;
+    }
+  }
+
+  .TrayFooter{
+    display:flex;
+    justify-content: flex-end;
+    border-top:1px solid #ebebeb;
+    margin-top:1rem;
+    p{
       margin:1rem;
     }
   }
-}
-
-
-.Notifications {
   
-  .Notification {
-    padding:.5rem 2rem;
-    background: #e7e7e7;
-    display: flex;
-    img {
-      width: 2rem;
-    }
-
-    .NotificationsData{
-      color:red;
-      margin:1rem;
-    }
-  }
 }
 
-.Profile{
-  padding:.5rem 2rem;
-    display: flex;
-    img {
-      width: 5rem;
-    }
-    .ProfileData{
-      color:$tray-title-color;
-      margin:1rem;
-      font-size:1.5rem;
-    }
-}

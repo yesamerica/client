@@ -28,11 +28,14 @@ const DashBoard = props => {
         <Menu />
       </header>
       <div className="DashBoardContentContainer">
-        <Profile user={user}/>
-        <Notifications />
-        <Events />
-        <LocalEvents />
+        {/* <Profile user={user}/> */}
+        <Notifications title="Please verify your email"/>
+        <Notifications title="You don't have any events"/>
+        <Notifications title="You haven't created any events"/>
+        {/* <Events /> */}
+        {/* <LocalEvents /> */}
       </div>
+      <AppTray />
     </div>
   );
 };

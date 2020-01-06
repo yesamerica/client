@@ -1,18 +1,21 @@
 import React from "react";
-import NotificationImage from '../../images/open_icon.svg'
-import NotificationIcon from '../../images/notification_icon.svg'
-const Notifications = () => {
+import NotificationIcon from "../../images/notification_icon.svg";
+const Notifications = props => {
+  const title = props.title || "Notifications";
+  const message = props.message || "Some Message";
+  const linkText = props.linkText || "Some Link";
+  const linkLocation = props.linkLocation || "/dashboard"
   return (
-    <section className="Notifications">
+    <section className="Notification">
       <div className="TrayTitle">
-          <img src={NotificationIcon} />
-        <p>Notifications</p>
+        <h2>{title}</h2>
       </div>
-      <div className="Notification">
-        <img src={NotificationImage}/>
-        <div className="NotificationsData">
-            You have a new sponsorship proposal
-        </div>
+      <div className="TrayBody">
+        <img src={NotificationIcon} />
+        <p>{message}</p>
+      </div>
+      <div className="TrayFooter">
+        <p onClick={()=>props.history.push(linkLocation)}>{linkText}</p>
       </div>
     </section>
   );
