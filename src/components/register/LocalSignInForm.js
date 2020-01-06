@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import userIcon from "../../images/user_icon.svg";
 import pwIcon from "../../images/pw_icon.svg";
+import emailIcon from "../../images/email_icon.svg";
 import logoWhite from "../../images/logo_wh.svg";
-import NoAccountButton from "./buttons/NoAccountButton";
 import { axiosWithAuth } from "../../util/axiosWithAuth";
 import BackButton from "./buttons/BackButton";
 const LocalSignInForm = props => {
@@ -52,7 +52,7 @@ const LocalSignInForm = props => {
     
         <form className="pageContent" onSubmit={handleSubmit}>
           <div>
-            <img src={userIcon} alt="Standard white user icon" />
+            <img src={emailIcon} alt="Standard white user icon" />
             <input
               type="text"
               name="email"
