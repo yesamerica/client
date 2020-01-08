@@ -1,6 +1,6 @@
 import React from "react";
 import {Redirect,Route} from 'react-router-dom'
-const ProtectedRoute = ({ component: Component, ...rest }) => {
+const ProtectedRoute = ({ props,component: Component, ...rest }) => {
   // const Component = props.component
 
   return (
@@ -9,7 +9,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
       render={() => {
         if (localStorage.getItem("token")) {
           // if token is in localstorage, render the given component
-          return <Component />;
+          return <Component {...props}/>;
         } else {
           return <Redirect to="/" />;
         }

@@ -1,6 +1,5 @@
 import React from "react";
 import myEvents from "../../images/my_events_icon.svg";
-import bookEvent from "../../images/book_icon.svg";
 import browseIcon from "../../images/browse_icon.svg";
 import createEvent from "../../images/create_icon.svg";
 import calendarIcon from "../../images/calendar.svg";

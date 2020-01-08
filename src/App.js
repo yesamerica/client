@@ -16,7 +16,7 @@ function App(props) {
   return loading ? ( <Loading />) : (
     <>
       <Route  path="/" component={SignInCanvas} />
-      <ProtectedRoute path="/dashboard" component={DashBoard} />
+      <ProtectedRoute path="/dashboard"  component={DashBoard} />
     </>
   );
 }

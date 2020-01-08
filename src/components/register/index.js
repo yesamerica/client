@@ -11,7 +11,7 @@ const SignInCanvas = props => {
   return (
     <div className="SignInCanvas">
       <Switch>
-        <Route exact path="/" component={SignInLanding} />
+        <Route exact path="/"  component={SignInLanding} />
         <Route exact path="/register" component={LocalRegisterForm} />
         <Route exact path="/signin" component={LocalSignupForm} />
         <Route match path="/onboarding/" component={Onboarding} />

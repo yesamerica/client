@@ -1,7 +1,7 @@
 //Sign in Canvas
 import React from "react";
 
-const FacebookSignInButton = () => {
+const FacebookSignInButton = (props) => {
   console.log("called");
   //You will notice the functions auth and authSuccess in each SignInButton, Maybe abstract out.
   const auth = () => {
@@ -20,7 +20,10 @@ const FacebookSignInButton = () => {
   };
 
   const authSuccess = userObject => {
-    console.log(JSON.parse(userObject.token));
+    const data = JSON.parse(userObject);
+    console.log(data)
+    localStorage.setItem("token", data.token);
+    data && props.history.push("/dashboard");
   };
 
   return (

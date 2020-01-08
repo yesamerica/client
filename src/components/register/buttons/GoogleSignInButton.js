@@ -21,8 +21,9 @@ const GoogleSignInButton = props => {
 
   const authSuccess = userObject => {
     const data = JSON.parse(userObject);
+    console.log(data)
     localStorage.setItem("token", data.token);
-    props.history.push("/dashboard");
+    data && props.history.push("/dashboard");
   };
 
   return (
